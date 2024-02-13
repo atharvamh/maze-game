@@ -116,6 +116,12 @@ function App() {
     },500);
   }
 
+  function acceptMission(){
+    setShowMaze(true);
+    missionAudio.pause();
+    missionAudio.currentTime = 0;
+  }
+
   return (
     <div className="App">
       <div className="title">
@@ -126,9 +132,11 @@ function App() {
         <>
           {
             win ?
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.1em"}}>
-              <h3>Congratulations! Kitty found love.</h3>
-              <h2 style={{ marginTop: "-0.8em"}}>Happy Valentine&apos;s Day Prachiii (Peachy7)❤️</h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.1em", color: "#000" }}>
+              <h3>Kitty found love !</h3>
+              <h2 style={{ marginTop: "-0.8em", marginBottom : "-0.1em" }}>
+                Happy Valentine&apos;s Day Prachiii (Peachy7) ❤️
+              </h2>
             </div> : <></>
           }
           <div className="maze-container">
@@ -157,7 +165,7 @@ function App() {
             justifyContent: "center", alignItems: "center", padding: "0.5em" }}>
             Guide the kitty 🐱 through the twists and turns to uncover a delightful surprise waiting at the end.
           </div>
-          <button onClick={() => setShowMaze(true)}>Accept Mission</button>
+          <button onClick={acceptMission}>Accept Mission</button>
         </> :
         <button onClick={handlePlay}>
           Play
