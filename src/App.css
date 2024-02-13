@@ -1,0 +1,68 @@
+#root{
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+}
+
+.title{
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background: #000;
+  color: #fff;
+}
+
+.arrow-container{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.arrow-container .bottom-level{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.maze-container {
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.maze-row {
+  display: flex;
+}
+
+.maze-cell {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.path {
+  background-color: white;
+}
+
+.wall {
+  background-color: black;
+}
+
+.player{
+  background-color: #ADD8E6;
+}
+
